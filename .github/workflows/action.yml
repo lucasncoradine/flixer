@@ -8,6 +8,9 @@ jobs:
   build:
     name: Build and Test
     runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./FlixerProject
     env:
       scheme: FlixerProject
       device: iPhone 14
