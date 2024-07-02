@@ -1,0 +1,28 @@
+name: Workflow
+
+on:
+  pull_request:
+    branches: [ "main", "dev" ]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: macos-latest
+    env:
+      scheme: FlixerProject
+      device: iPhone 14
+      platform: iOS Simulator
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Build
+        run: |
+          set -o pipefail
+          xcodebuild build-for-testing -scheme "$scheme" -destination "platform=$platform,name=$device" | xcpretty
+          
+      - name: Test
+        run: |
+          set -o pipefail
+          xcodebuild test-without-building -scheme "$scheme" -destination "platform=$platform,name=$device" | xcpretty
