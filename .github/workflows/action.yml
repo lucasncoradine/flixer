@@ -8,6 +8,9 @@ jobs:
   build:
     name: Build and Test
     runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./FlixerProject
     env:
       scheme: FlixerProject
       device: iPhone 14
@@ -20,9 +23,19 @@ jobs:
       - name: Build
         run: |
           set -o pipefail
-          xcodebuild build-for-testing -scheme "$scheme" -destination "platform=$platform,name=$device" | xcpretty
-          
+          xcodebuild build-for-testing \
+          -scheme "$scheme" \
+          -destination "platform=$platform,name=$device" \
+          -skipPackagePluginValidation \
+          -skipMacroValidation \
+          | xcpretty
+
       - name: Test
         run: |
           set -o pipefail
-          xcodebuild test-without-building -scheme "$scheme" -destination "platform=$platform,name=$device" | xcpretty
+          xcodebuild test-without-building \
+          -scheme "$scheme" \
+          -destination "platform=$platform,name=$device" \
+          -skipPackagePluginValidation \
+          -skipMacroValidation \
+          | xcpretty
