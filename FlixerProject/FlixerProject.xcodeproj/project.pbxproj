@@ -12,19 +12,10 @@
 		29A73AD62C34315800E76594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A73AD52C34315800E76594 /* Assets.xcassets */; };
 		29A73AD92C34315800E76594 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A73AD82C34315800E76594 /* Preview Assets.xcassets */; };
 		29A73AE32C34315800E76594 /* FlixerProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A73AE22C34315800E76594 /* FlixerProjectTests.swift */; };
-		29A73AED2C34315800E76594 /* FlixerProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A73AEC2C34315800E76594 /* FlixerProjectUITests.swift */; };
-		29A73AEF2C34315800E76594 /* FlixerProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A73AEE2C34315800E76594 /* FlixerProjectUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		29A73ADF2C34315800E76594 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29A73AC62C34315500E76594 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 29A73ACD2C34315600E76594;
-			remoteInfo = FlixerProject;
-		};
-		29A73AE92C34315800E76594 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29A73AC62C34315500E76594 /* Project object */;
 			proxyType = 1;
@@ -41,9 +32,6 @@
 		29A73AD82C34315800E76594 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		29A73ADE2C34315800E76594 /* FlixerProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixerProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A73AE22C34315800E76594 /* FlixerProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixerProjectTests.swift; sourceTree = "<group>"; };
-		29A73AE82C34315800E76594 /* FlixerProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlixerProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		29A73AEC2C34315800E76594 /* FlixerProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixerProjectUITests.swift; sourceTree = "<group>"; };
-		29A73AEE2C34315800E76594 /* FlixerProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlixerProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29A73AE52C34315800E76594 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +57,6 @@
 			children = (
 				29A73AD02C34315600E76594 /* FlixerProject */,
 				29A73AE12C34315800E76594 /* FlixerProjectTests */,
-				29A73AEB2C34315800E76594 /* FlixerProjectUITests */,
 				29A73ACF2C34315600E76594 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +66,6 @@
 			children = (
 				29A73ACE2C34315600E76594 /* FlixerProject.app */,
 				29A73ADE2C34315800E76594 /* FlixerProjectTests.xctest */,
-				29A73AE82C34315800E76594 /* FlixerProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				29A73AE22C34315800E76594 /* FlixerProjectTests.swift */,
 			);
 			path = FlixerProjectTests;
-			sourceTree = "<group>";
-		};
-		29A73AEB2C34315800E76594 /* FlixerProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				29A73AEC2C34315800E76594 /* FlixerProjectUITests.swift */,
-				29A73AEE2C34315800E76594 /* FlixerProjectUITestsLaunchTests.swift */,
-			);
-			path = FlixerProjectUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,24 +136,6 @@
 			productReference = 29A73ADE2C34315800E76594 /* FlixerProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		29A73AE72C34315800E76594 /* FlixerProjectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 29A73AF82C34315800E76594 /* Build configuration list for PBXNativeTarget "FlixerProjectUITests" */;
-			buildPhases = (
-				29A73AE42C34315800E76594 /* Sources */,
-				29A73AE52C34315800E76594 /* Frameworks */,
-				29A73AE62C34315800E76594 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				29A73AEA2C34315800E76594 /* PBXTargetDependency */,
-			);
-			name = FlixerProjectUITests;
-			productName = FlixerProjectUITests;
-			productReference = 29A73AE82C34315800E76594 /* FlixerProjectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,10 +150,6 @@
 						CreatedOnToolsVersion = 15.0;
 					};
 					29A73ADD2C34315800E76594 = {
-						CreatedOnToolsVersion = 15.0;
-						TestTargetID = 29A73ACD2C34315600E76594;
-					};
-					29A73AE72C34315800E76594 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 29A73ACD2C34315600E76594;
 					};
@@ -225,7 +173,6 @@
 			targets = (
 				29A73ACD2C34315600E76594 /* FlixerProject */,
 				29A73ADD2C34315800E76594 /* FlixerProjectTests */,
-				29A73AE72C34315800E76594 /* FlixerProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,13 +188,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		29A73ADC2C34315800E76594 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		29A73AE62C34315800E76594 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -274,15 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		29A73AE42C34315800E76594 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				29A73AEF2C34315800E76594 /* FlixerProjectUITestsLaunchTests.swift in Sources */,
-				29A73AED2C34315800E76594 /* FlixerProjectUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -290,11 +221,6 @@
 			isa = PBXTargetDependency;
 			target = 29A73ACD2C34315600E76594 /* FlixerProject */;
 			targetProxy = 29A73ADF2C34315800E76594 /* PBXContainerItemProxy */;
-		};
-		29A73AEA2C34315800E76594 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 29A73ACD2C34315600E76594 /* FlixerProject */;
-			targetProxy = 29A73AE92C34315800E76594 /* PBXContainerItemProxy */;
 		};
 		29A73B0D2C3476EE00E76594 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -520,42 +446,6 @@
 			};
 			name = Release;
 		};
-		29A73AF92C34315800E76594 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34BX29F83H;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coradine.FlixerProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlixerProject;
-			};
-			name = Debug;
-		};
-		29A73AFA2C34315800E76594 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 34BX29F83H;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coradine.FlixerProjectUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlixerProject;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,15 +472,6 @@
 			buildConfigurations = (
 				29A73AF62C34315800E76594 /* Debug */,
 				29A73AF72C34315800E76594 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		29A73AF82C34315800E76594 /* Build configuration list for PBXNativeTarget "FlixerProjectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				29A73AF92C34315800E76594 /* Debug */,
-				29A73AFA2C34315800E76594 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
