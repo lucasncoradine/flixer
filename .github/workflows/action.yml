@@ -11,35 +11,32 @@ concurrency:
 jobs:
   build:
     name: Build and Test
-    runs-on: macos-latest
+    runs-on: macos-14
     defaults:
       run:
         working-directory: ./FlixerProject
     env:
       scheme: FlixerProject
-      device: iPhone 14
+      device: iPhone 15
       platform: iOS Simulator
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1.6.0
+        with: 
+          xcode-version: '15.3'
         
       - name: Build
         run: |
           set -o pipefail
-          xcodebuild build-for-testing \
-          -scheme "$scheme" \
-          -destination "platform=$platform,name=$device" \
-          -skipPackagePluginValidation \
-          -skipMacroValidation \
+          xcodebuild build-for-testing -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation 
           | xcpretty
 
       - name: Test
         run: |
           set -o pipefail
-          xcodebuild test-without-building \
-          -scheme "$scheme" \
-          -destination "platform=$platform,name=$device" \
-          -skipPackagePluginValidation \
-          -skipMacroValidation \
+          xcodebuild test-without-building -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation
           | xcpretty
