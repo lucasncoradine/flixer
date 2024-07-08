@@ -42,11 +42,9 @@ jobs:
       - name: Build
         run: |
           set -o pipefail
-          xcodebuild build-for-testing -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation 
-          | xcpretty
+          xcodebuild build-for-testing -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation | xcpretty
 
       - name: Test
         run: |
           set -o pipefail
-          xcodebuild test-without-building -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation
-          | xcpretty
+          xcodebuild test-without-building -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation | xcpretty
