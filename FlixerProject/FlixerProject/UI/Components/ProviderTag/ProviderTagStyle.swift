@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum ProviderTagStyle {
+enum ProviderTagStyle: CaseIterable {
     case netflix
     case displeyPlus
     case primeVideo
@@ -98,4 +98,17 @@ enum ProviderTagStyle {
             return .dsWhite
         }
     }
+
+    static var allCases: [ProviderTagStyle] = [
+        .netflix, .displeyPlus,
+        .primeVideo,
+        .claroTv,
+        .paramountPlus,
+        .max,
+        .appleTvPlus,
+        .globoplay,
+        .crunchyroll,
+        .plutotv,
+        .telecine
+    ]
 }

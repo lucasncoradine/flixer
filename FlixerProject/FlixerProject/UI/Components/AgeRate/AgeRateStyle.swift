@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum AgeRateStyle: String {
+enum AgeRateStyle: String, CaseIterable {
     case everyone = "L"
     case age10 = "10"
     case age12 = "12"
@@ -26,7 +26,7 @@ enum AgeRateStyle: String {
     }
 }
 
-enum AgeRateSize {
+enum AgeRateSize: CaseIterable {
     case large
     case medium
     case small
