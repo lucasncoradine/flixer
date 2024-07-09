@@ -1,12 +1,12 @@
 import Foundation
 
-enum ImageFrameStyle {
+enum ImageFrameStyle: CaseIterable {
     case vertical
     case horizontal
     case square
 }
 
-enum ImageFrameSize {
+enum ImageFrameSize: CaseIterable {
     case large
     case medium
     case small
