@@ -8,7 +8,7 @@ BRANCH_BASE="origin/dev"
 BRANCH_TYPE="feature"
 
 # Request a name
-print_yellow "Branch name:"
+print_yellow "Branch name: "
 read -p "" BRANCH_NAME
 
 # Request base branch
@@ -16,7 +16,7 @@ print_yellow "Make branch from (default is $(print_green origin/dev)): "
 read -p "" BRANCH_BASE
 
 # Branch type
-print_yellow "Type of branch: "
+print_yellow "Type of branch: \n"
 options=("Core" "Feature" "UI")
 select_option "${options[@]}"
 TYPE="${options[$?]}" 

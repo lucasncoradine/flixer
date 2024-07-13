@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Clear the __Snapshots__ folder and run tests to re-create them
-GREEN='\033[32m'
-CLEAR='\033[0m'
+source ./Scripts/Helpers/colored-text.sh
 
-printf "${GREEN}Clearing folders${CLEAR}\n"
+# Clear the __Snapshots__ folder and run tests to re-create them
+print_green "Clearing Snapshots folders \n"
 find . -type d -name "__Snapshots__" | while read folder
 do
     rm -rf "$folder"
 done
 
-printf "${GREEN}Starting tests. Please wait...${CLEAR}\n"
+print_green "Stating tests. Please wait... \n"
+set_output_yellow
 cd FlixerProject
 xcodebuild test -quiet -scheme FlixerProjectSnapshotTests -destination "platform=iOS Simulator,name=iPhone 15" | xcpretty -t || printf "${GREEN}Done!${CLEAR}\n"
+set_output_clear

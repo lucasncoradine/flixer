@@ -1,27 +1,24 @@
 #!/bin/bash
 
-GREEN='\033[32m'
-YELLOW='\033[33m'
-CLEAR='\033[0m'
+source ./Scripts/Helpers/colored-text.sh
 
-# set -x
-# Helper functions
+# Helper function
 function install_gem() {
-    printf "Installing ${GREEN}$1${CLEAR}\n"
+    printf "Installing $(print_green $1)\n"
 
     IS_INSTALLED=$(gem list -i "^$1$")
     if $IS_INSTALLED
     then
-        printf "${YELLOW}Already installed${CLEAR}\n"
+        print_yellow "Already installed \n"
     else
-        printf "${YELLOW}"
+        set_output_yellow
         gem install $1
-        printf "${CLEAR}"
+        set_output_clear
     fi
 }
 # 
 
-printf "Installing dependencies... 📦\n"
+printf "Installing dependencies... 📦\n\n"
 
 # Install xcpretty
 install_gem xcpretty
