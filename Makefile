@@ -14,4 +14,4 @@ pullrequest: ## Make a new Pull Request
 	@./Scripts/pull-request.sh
 	
 branch: ## Create a new branch
-	@./Scripts/branch.sh
+	@./Scripts/branch.sh $(base)
