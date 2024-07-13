@@ -22,8 +22,9 @@ print_yellow "Pull Request destination (default is $(print_green $DEFAULT_DESTIN
 read DESTINATION
 DESTINATION=${DESTINATION:-$DEFAULT_DESTINATION}
 
-set -x
 # Create Pull Request
 gh pr create --title "$BRANCH_FOLDER($TYPE): $TITLE" \
     --base $DESTINATION \
-    --assignee "@me" 
+    --assignee "@me" \
+    --body-file $BODY_FILE \
+    --web
