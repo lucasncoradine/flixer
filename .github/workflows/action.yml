@@ -11,7 +11,7 @@ concurrency:
 jobs:
   build:
     name: Build and Test
-    runs-on: macos-14
+    runs-on: macos-latest
     defaults:
       run:
         working-directory: ./FlixerProject
@@ -33,11 +33,6 @@ jobs:
       - name: Set Gems
         run: |
           gem install xcpretty
-
-      - name: Setup Xcode
-        uses: maxim-lobanov/setup-xcode@v1.6.0
-        with: 
-          xcode-version: '15.3'
         
       - name: Build
         run: |
