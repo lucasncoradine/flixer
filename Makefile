@@ -9,3 +9,9 @@ setup: ## Install required dependencies
 
 snapshots: ## Setup new snapshot images
 	@./Scripts/snapshots.sh
+
+pullrequest: ## Make a new Pull Request
+	@./Scripts/pull-request.sh
+	
+branch: ## Create a new branch
+	@./Scripts/branch.sh
