@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "8B5E9018-191A-4F66-9996-55229FEFE01C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:FlixerProject.xcodeproj",
+      "identifier" : "29A73ACD2C34315600E76594",
+      "name" : "FlixerProject"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:FlixerProject.xcodeproj",
+        "identifier" : "29A73ADD2C34315800E76594",
+        "name" : "FlixerProjectTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:FlixerProject.xcodeproj",
+        "identifier" : "298A80C32C3D81FD005E2367",
+        "name" : "FlixerProjectSnapshotTests"
+      }
+    }
+  ],
+  "version" : 1
+}
