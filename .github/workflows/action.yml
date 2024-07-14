@@ -19,6 +19,8 @@ jobs:
       scheme: FlixerProject
       device: iPhone 15
       platform: iOS Simulator
+      ios_version: 17.5
+      xcode_version: 15.4.0
 
     steps:
       - name: Checkout
@@ -33,13 +35,26 @@ jobs:
       - name: Set Gems
         run: |
           gem install xcpretty
+          
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1.6.0
+        with:
+          xcode-version: ${{env.xcode_version}}
         
       - name: Build
         run: |
           set -o pipefail
-          xcodebuild build-for-testing -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation | xcpretty
+          xcodebuild build-for-testing \
+          -scheme "$scheme" \
+          -destination "platform=$platform,name=$device,OS=$ios_version" \
+          -skipPackagePluginValidation \
+          -skipMacroValidation | xcpretty
 
       - name: Test
         run: |
           set -o pipefail
-          xcodebuild test-without-building -scheme "$scheme" -destination "platform=$platform,name=$device" -skipPackagePluginValidation -skipMacroValidation | xcpretty
+          xcodebuild test-without-building \
+          -scheme "$scheme" \
+          -destination "platform=$platform,name=$device,OS=$ios_version" \
+          -skipPackagePluginValidation \
+          -skipMacroValidation | xcpretty
