@@ -1,11 +1,30 @@
 import SwiftUI
 
+/// Represents the style of the AgeRate component
 enum AgeRateStyle: String, CaseIterable {
+    ///```
+    /// color: green
+    /// value: L
     case everyone = "L"
+    ///```
+    /// color: blue
+    /// value: 10
     case age10 = "10"
+    ///```
+    /// color: yellow
+    /// value: 12
     case age12 = "12"
+    ///```
+    /// color: orange
+    /// value: 14
     case age14 = "14"
+    ///```
+    /// color: red
+    /// value: 16
     case age16 = "16"
+    ///```
+    /// color: black
+    /// value: 18
     case age18 = "18"
 
     var color: Color {
@@ -27,8 +46,17 @@ enum AgeRateStyle: String, CaseIterable {
 }
 
 enum AgeRateSize: CaseIterable {
+    ///```
+    ///size: 40x40
+    ///radius: 10
     case large
+    ///```
+    ///size: 32x32
+    ///radius: 8
     case medium
+    ///```
+    ///size: 20x20
+    ///radius: 6
     case small
 
     var frame: CGSize {

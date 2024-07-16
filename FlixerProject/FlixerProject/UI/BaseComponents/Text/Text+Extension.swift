@@ -1,12 +1,20 @@
 import SwiftUI
 
 extension Text {
+    /// Makes the text conform to the given style using the ``TextStyleModifier``
+    ///
+    /// - parameters:
+    ///     - style: The style of the text
     func textStyle(_ style: TextStyle) -> some View {
         modifier(TextStyleModifier(style: style))
     }
 }
 
 // MARK: - Modifier
+/// Modifies the text according the given style
+///
+/// - parameters:
+///     - style: The style of the text
 struct TextStyleModifier: ViewModifier {
     private let style: TextStyle
 

@@ -53,15 +53,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "29A73ACD2C34315600E76594"
-            BuildableName = "FlixerProject.app"
-            BlueprintName = "FlixerProject"
-            ReferencedContainer = "container:FlixerProject.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -1,5 +1,12 @@
 import SwiftUI
 
+/// Creates a ProviderTag component, used to display the Provider logo.
+///
+/// - parameters:
+///     - style: The style of the tag.
+///     
+/// ## Reference
+/// [Figma](https://www.figma.com/design/pqSdo2xKxBGCKXDtI2vtvH/Flixer?node-id=28-486)
 struct ProviderTag: View {
     var style: ProviderTagStyle
 
@@ -58,18 +65,9 @@ struct ProviderTagImageModifier: ViewModifier {
 // MARK: - Preview
 #Preview {
     VStack {
-        ProviderTag(style: .appleTvPlus)
-        ProviderTag(style: .claroTv)
-        ProviderTag(style: .crunchyroll)
-        ProviderTag(style: .displeyPlus)
-        ProviderTag(style: .globoplay)
-        ProviderTag(style: .max)
-        ProviderTag(style: .netflix)
-        ProviderTag(style: .paramountPlus)
-        ProviderTag(style: .plutotv)
-        ProviderTag(style: .primeVideo)
-        ProviderTag(style: .telecine)
-        ProviderTag(style: .generic(name: "Genérico"))
+        ForEach(ProviderTagStyle.allCases, id: \.self.name) { provider in
+            ProviderTag(style: .appleTvPlus)
+        }
     }
     .preferredColorScheme(.dark)
 }

@@ -1,5 +1,13 @@
 import SwiftUI
 
+/// Creates an AgeRateComponent which displays the target audience minimum recommendade age.
+///
+/// - Parameters:
+///     - style: The style of the component
+///     - size: The size of the componente. Default is `large`
+///
+/// ## Reference
+/// [Figma](https://www.figma.com/design/pqSdo2xKxBGCKXDtI2vtvH/Flixer?node-id=27-481)
 struct AgeRateComponent: View {
     let style: AgeRateStyle
     var size: AgeRateSize = .large

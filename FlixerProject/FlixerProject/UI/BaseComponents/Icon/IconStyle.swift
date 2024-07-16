@@ -1,8 +1,11 @@
 import SwiftUI
 
 enum IconSize: CGFloat {
+    /// Size: 14
     case small = 14
+    /// Size: 20
     case medium = 20
+    /// Size: 26
     case large = 26
 }
 
@@ -20,6 +23,7 @@ enum IconImage: CaseIterable {
 
 // MARK: - Icon List
 extension IconImage {
+    /// Regular image version of the icon
     var regular: ImageResource {
         switch self {
         case .chevronRight:
@@ -43,6 +47,7 @@ extension IconImage {
         }
     }
 
+    /// Filled image version of the icon
     var filled: ImageResource {
         switch self {
         case .chevronRight:

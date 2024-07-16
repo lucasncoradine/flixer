@@ -1,5 +1,15 @@
 import SwiftUI
 
+/// Creates an ImageFrame component with an image from the given URL. If no style was given, the component will fill the parent view.
+///
+///
+/// - parameters:
+///     - url: The URL of the image to be loaded
+///     - style(Optional): The style of the frame
+///     - size: The size of the frame. Default value is `large`
+///
+/// ## Reference
+/// [Figma](https://www.figma.com/design/pqSdo2xKxBGCKXDtI2vtvH/Flixer?node-id=13-1057)
 struct ImageFrame: View {
     let url: String
     @State var style: ImageFrameStyle?
@@ -27,8 +37,12 @@ struct ImageFrame: View {
         .cornerRadius(10)
     }
 
-    @ViewBuilder
-    func text(title: String, description: String = "") -> some View {
+    
+    /// It renders a text content in front of the Image
+    /// - Parameters:
+    ///   - title: The title to be diplayed
+    ///   - description: The description to be displayed
+    @ViewBuilder func text(title: String, description: String = "") -> some View {
         self.overlay(alignment: .bottom) {
             VStack(alignment: .leading) {
                 Text(title)
