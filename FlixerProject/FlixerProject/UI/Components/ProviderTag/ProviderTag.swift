@@ -65,7 +65,7 @@ struct ProviderTagImageModifier: ViewModifier {
 // MARK: - Preview
 #Preview {
     VStack {
-        ForEach(ProviderTagStyle.allCases, id: \.self.name) { provider in
+        ForEach(ProviderTagStyle.allCases, id: \.self.name) { _ in
             ProviderTag(style: .appleTvPlus)
         }
     }

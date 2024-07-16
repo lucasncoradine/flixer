@@ -113,7 +113,7 @@ enum ProviderTagStyle: CaseIterable {
     }
 
     static var allCases: [ProviderTagStyle] = [
-        .netflix, 
+        .netflix,
         .displeyPlus,
         .primeVideo,
         .claroTv,

@@ -1,6 +1,9 @@
 import Foundation
 
-/// Styles of the text according to the [Design System](https://www.figma.com/design/pqSdo2xKxBGCKXDtI2vtvH/Flixer?node-id=13-1020)
+/// Styles of the text
+///
+/// ## Reference
+/// [Design System](https://www.figma.com/design/pqSdo2xKxBGCKXDtI2vtvH/Flixer?node-id=13-1020)
 enum TextStyle {
     /// Font Size: 34
     case large

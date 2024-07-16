@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// Creates an ImageFrame component with an image from the given URL. If no style was given, the component will fill the parent view.
+/// Creates an ImageFrame component with an image from the given URL.
+/// If no style was given, the component will fill the parent view.
 ///
 ///
 /// - parameters:
@@ -37,7 +38,6 @@ struct ImageFrame: View {
         .cornerRadius(10)
     }
 
-    
     /// It renders a text content in front of the Image
     /// - Parameters:
     ///   - title: The title to be diplayed
