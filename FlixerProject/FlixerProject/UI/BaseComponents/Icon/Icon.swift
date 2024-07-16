@@ -3,18 +3,27 @@ import SwiftUI
 struct Icon: View {
     let icon: IconImage
     let size: IconSize
-    let filled: Bool
 
     init(_ icon: IconImage,
-         size: IconSize = .medium,
-         filled: Bool = false) {
+         size: IconSize = .medium) {
         self.icon = icon
         self.size = size
-        self.filled = filled
     }
 
     var body: some View {
-        Image(icon.image(filled: filled))
+        makeIcon(from: icon.regular)
+    }
+
+    @ViewBuilder
+    func filled() -> some View {
+        makeIcon(from: icon.filled)
+    }
+}
+
+// MARK: - Helpers
+private extension Icon {
+    func makeIcon(from imageResource: ImageResource) -> some View {
+        Image(imageResource)
             .resizable()
             .scaledToFit()
             .frame(width: size.rawValue,
@@ -24,38 +33,21 @@ struct Icon: View {
 
 // MARK: - Preview
 #Preview {
-    VStack {
-        HStack {
-            Icon(.home, size: .large)
-            Icon(.home, size: .large, filled: true)
+    List {
+        Section("Regular") {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
+                ForEach(IconImage.allCases, id: \.self) { icon in
+                    Icon(icon, size: .large)
+                }
+            }
         }
-        HStack {
-            Icon(.search, size: .large)
-            Icon(.search, size: .large, filled: true)
-        }
-        HStack {
-            Icon(.profile, size: .large)
-            Icon(.profile, size: .large, filled: true)
-        }
-        HStack {
-            Icon(.monitor, size: .large)
-            Icon(.monitor, size: .large, filled: true)
-        }
-        HStack {
-            Icon(.monitorPlay, size: .large)
-            Icon(.monitorPlay, size: .large, filled: true)
-        }
-        HStack {
-            Icon(.chevronRight, size: .large)
-            Icon(.chevronRight, size: .large, filled: true)
-        }
-        HStack {
-            Icon(.plus, size: .large)
-            Icon(.plus, size: .large, filled: true)
-        }
-        HStack {
-            Icon(.thumbsUp, size: .large)
-            Icon(.thumbsUp, size: .large, filled: true)
+
+        Section("Filled") {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
+                ForEach(IconImage.allCases, id: \.self) { icon in
+                    Icon(icon, size: .large).filled()
+                }
+            }
         }
     }
 }

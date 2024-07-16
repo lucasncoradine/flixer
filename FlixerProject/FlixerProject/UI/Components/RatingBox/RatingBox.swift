@@ -6,7 +6,8 @@ struct RatingBox: View {
 
     var body: some View {
         HStack(spacing: 4) {
-            Icon(.star, size: size.iconSize, filled: true)
+            Icon(.star, size: size.iconSize)
+                .filled()
                 .foregroundStyle(.dsYellow)
             Text(value)
                 .textStyle(size.textStyle)

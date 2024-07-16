@@ -307,7 +307,6 @@
 		29A73AD02C34315600E76594 /* FlixerProject */ = {
 			isa = PBXGroup;
 			children = (
-				295D87882C3499360024DD0F /* Helpers */,
 				29A73B0E2C34894500E76594 /* Resources */,
 				29A73AFC2C34393500E76594 /* UI */,
 				29A73AD12C34315600E76594 /* FlixerProjectApp.swift */,
@@ -336,6 +335,7 @@
 		29A73AFC2C34393500E76594 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				295D87882C3499360024DD0F /* Helpers */,
 				295D87942C35DC920024DD0F /* Components */,
 				29A73AFD2C34394D00E76594 /* BaseComponents */,
 			);

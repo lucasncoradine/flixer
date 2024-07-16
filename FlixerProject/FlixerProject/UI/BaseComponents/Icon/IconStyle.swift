@@ -1,17 +1,12 @@
 import SwiftUI
 
-enum IconStyle {
-    case normal
-    case filled
-}
-
 enum IconSize: CGFloat {
     case small = 14
     case medium = 20
     case large = 26
 }
 
-enum IconImage {
+enum IconImage: CaseIterable {
     case chevronRight
     case home
     case thumbsUp
@@ -21,18 +16,11 @@ enum IconImage {
     case profile
     case search
     case star
-
-    func image(filled: Bool = false) -> ImageResource {
-        if filled {
-            return imageFilled
-        }
-        return defaultImage
-    }
 }
 
 // MARK: - Icon List
-private extension IconImage {
-    private var defaultImage: ImageResource {
+extension IconImage {
+    var regular: ImageResource {
         switch self {
         case .chevronRight:
             return .Icon.chevronRight
@@ -55,7 +43,7 @@ private extension IconImage {
         }
     }
 
-    private var imageFilled: ImageResource {
+    var filled: ImageResource {
         switch self {
         case .chevronRight:
             return .Icon.chevronRightFill
