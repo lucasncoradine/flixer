@@ -1,5 +1,10 @@
 import SwiftUI
 
+/// Creates an Icon view with the given image and size
+///
+/// - parameters:
+///     - icon: The icon to be created
+///     - size: The size of the icon
 struct Icon: View {
     let icon: IconImage
     let size: IconSize
@@ -14,6 +19,7 @@ struct Icon: View {
         makeIcon(from: icon.regular)
     }
 
+    /// Updates the view with the filled image of the current icon
     @ViewBuilder
     func filled() -> some View {
         makeIcon(from: icon.filled)

@@ -1,5 +1,11 @@
 import SwiftUI
 
+/// Modify the view creating a border arround it
+///
+/// - parameters:
+///     - color: The color of the border
+///     - lineWidth: The width of the border
+///     - cornerRadius: The radius of the border
 struct BorderedModifier: ViewModifier {
     private let color: Color
     private let lineWidth: CGFloat

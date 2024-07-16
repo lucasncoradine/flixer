@@ -1,5 +1,12 @@
 import SwiftUI
 
+/// Creates a RatingBox component
+///
+/// - parameters:
+///     - value: The value description
+///     - size: The size of the component
+/// ## Reference
+/// [Figma](https://www.figma.com/design/pqSdo2xKxBGCKXDtI2vtvH/Flixer?node-id=27-557)
 struct RatingBox: View {
     let value: String
     var size: RatingBoxSize = .medium

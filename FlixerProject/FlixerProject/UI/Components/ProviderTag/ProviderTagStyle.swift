@@ -1,17 +1,30 @@
 import SwiftUI
 
+/// Describes the provider name, logo and color
 enum ProviderTagStyle: CaseIterable {
+    /// Netflix
     case netflix
+    /// Disney Plus
     case displeyPlus
+    /// Prime Video
     case primeVideo
+    /// Claro TV
     case claroTv
+    /// Paramount+
     case paramountPlus
+    /// Max
     case max
+    /// Apple TV+
     case appleTvPlus
+    /// Globoplay
     case globoplay
+    /// Crunchyroll
     case crunchyroll
+    /// Pluto TV
     case plutotv
+    /// Telecine
     case telecine
+    /// Generic name
     case generic(name: String)
 
     var name: String {
@@ -100,7 +113,8 @@ enum ProviderTagStyle: CaseIterable {
     }
 
     static var allCases: [ProviderTagStyle] = [
-        .netflix, .displeyPlus,
+        .netflix,
+        .displeyPlus,
         .primeVideo,
         .claroTv,
         .paramountPlus,
@@ -109,6 +123,7 @@ enum ProviderTagStyle: CaseIterable {
         .globoplay,
         .crunchyroll,
         .plutotv,
-        .telecine
+        .telecine,
+        .generic(name: "Generic")
     ]
 }

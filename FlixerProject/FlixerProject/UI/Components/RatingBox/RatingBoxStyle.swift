@@ -1,6 +1,12 @@
 enum RatingBoxSize {
+    /// - Text style: `subheading`
+    /// - Icon size: `large`
     case large
+    /// - Text style: `body`
+    /// - Icon size: `medium`
     case medium
+    /// - Text style: `small`
+    /// - Icon size: `small`
     case small
 
     var textStyle: TextStyle {

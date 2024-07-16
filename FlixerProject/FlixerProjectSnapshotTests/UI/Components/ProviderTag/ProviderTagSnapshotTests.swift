@@ -9,9 +9,4 @@ final class ProviderTagSnapshotTests: XCTestCase {
             assertSnapshot(of: providerTag, as: .image)
         }
     }
-
-    func testGenericProviderTag_ShouldMatchSnapshot() {
-        let generic = ProviderTag(style: .generic(name: "Provider"))
-        assertSnapshot(of: generic, as: .image)
-    }
 }
