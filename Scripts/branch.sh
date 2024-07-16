@@ -18,7 +18,7 @@ BRANCH_BASE=${BRANCH_BASE:-$DEFAULT_BASE}
 print_yellow "Type of branch: \n"
 options=("Core" "Feature" "UI")
 select_option "${options[@]}"
-TYPE="${options[$?]}" 
+TYPE=$(echo "${options[$?]}" | tr '[:upper:]' '[:lower:]')
 
 # Create Pull Request
 git checkout -b "$TYPE/$BRANCH_NAME" $BRANCH_BASE
