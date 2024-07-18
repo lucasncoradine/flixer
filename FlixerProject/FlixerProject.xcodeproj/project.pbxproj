@@ -35,6 +35,10 @@
 		29A73B052C34474B00E76594 /* AgeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A73B042C34474B00E76594 /* AgeRate.swift */; };
 		29A73B072C34476400E76594 /* AgeRateStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A73B062C34476400E76594 /* AgeRateStyle.swift */; };
 		29A73B112C34895C00E76594 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A73B102C34895C00E76594 /* Colors.xcassets */; };
+		29EB62802C49434D00058DAF /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB627F2C49434D00058DAF /* Avatar.swift */; };
+		29EB62832C49435A00058DAF /* AvatarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB62822C49435A00058DAF /* AvatarStyle.swift */; };
+		29EB62862C494EA400058DAF /* AvatarSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB62852C494EA400058DAF /* AvatarSnapshotTests.swift */; };
+		29EB628B2C49656300058DAF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EB628A2C49656300058DAF /* String+Extension.swift */; };
 		29F6678A2C3DD97900BBE42F /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F667892C3DD97900BBE42F /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +91,10 @@
 		29A73B042C34474B00E76594 /* AgeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRate.swift; sourceTree = "<group>"; };
 		29A73B062C34476400E76594 /* AgeRateStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRateStyle.swift; sourceTree = "<group>"; };
 		29A73B102C34895C00E76594 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		29EB627F2C49434D00058DAF /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		29EB62822C49435A00058DAF /* AvatarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStyle.swift; sourceTree = "<group>"; };
+		29EB62852C494EA400058DAF /* AvatarSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarSnapshotTests.swift; sourceTree = "<group>"; };
+		29EB628A2C49656300058DAF /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		29F667892C3DD97900BBE42F /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +225,7 @@
 		298A80D22C3D82BF005E2367 /* BaseComponents */ = {
 			isa = PBXGroup;
 			children = (
+				29EB62842C494E9900058DAF /* Avatar */,
 				298A80D42C3DB3EF005E2367 /* Text */,
 				298A80D32C3D82C5005E2367 /* Icon */,
 			);
@@ -307,6 +316,7 @@
 		29A73AD02C34315600E76594 /* FlixerProject */ = {
 			isa = PBXGroup;
 			children = (
+				29EB62872C49654100058DAF /* Helpers */,
 				29A73B0E2C34894500E76594 /* Resources */,
 				29A73AFC2C34393500E76594 /* UI */,
 				29A73AD12C34315600E76594 /* FlixerProjectApp.swift */,
@@ -345,6 +355,7 @@
 		29A73AFD2C34394D00E76594 /* BaseComponents */ = {
 			isa = PBXGroup;
 			children = (
+				29EB62812C49435100058DAF /* Avatar */,
 				295D87952C35DD9B0024DD0F /* Icon */,
 				29A73AFE2C34397400E76594 /* Text */,
 			);
@@ -376,6 +387,31 @@
 				29A73B102C34895C00E76594 /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		29EB62812C49435100058DAF /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				29EB627F2C49434D00058DAF /* Avatar.swift */,
+				29EB62822C49435A00058DAF /* AvatarStyle.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		29EB62842C494E9900058DAF /* Avatar */ = {
+			isa = PBXGroup;
+			children = (
+				29EB62852C494EA400058DAF /* AvatarSnapshotTests.swift */,
+			);
+			path = Avatar;
+			sourceTree = "<group>";
+		};
+		29EB62872C49654100058DAF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				29EB628A2C49656300058DAF /* String+Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		29F667882C3DD96A00BBE42F /* Helpers */ = {
@@ -531,6 +567,7 @@
 				298A80D62C3DB415005E2367 /* TextSnapshopTest.swift in Sources */,
 				298A80C72C3D81FD005E2367 /* IconSnapshotTests.swift in Sources */,
 				29F6678A2C3DD97900BBE42F /* View+Extension.swift in Sources */,
+				29EB62862C494EA400058DAF /* AvatarSnapshotTests.swift in Sources */,
 				298A80E32C3DB990005E2367 /* ProviderTagSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,12 +582,15 @@
 				29A73AD42C34315600E76594 /* ContentView.swift in Sources */,
 				29A73AD22C34315600E76594 /* FlixerProjectApp.swift in Sources */,
 				29A73B002C34399200E76594 /* Text+Extension.swift in Sources */,
+				29EB62832C49435A00058DAF /* AvatarStyle.swift in Sources */,
 				29A73B052C34474B00E76594 /* AgeRate.swift in Sources */,
+				29EB628B2C49656300058DAF /* String+Extension.swift in Sources */,
 				295D878B2C3499510024DD0F /* View+Extension.swift in Sources */,
 				295D87A32C3712AB0024DD0F /* RatingBox.swift in Sources */,
 				295D87972C35DDA50024DD0F /* Icon.swift in Sources */,
 				295D879A2C35E1210024DD0F /* IconStyle.swift in Sources */,
 				29A73B072C34476400E76594 /* AgeRateStyle.swift in Sources */,
+				29EB62802C49434D00058DAF /* Avatar.swift in Sources */,
 				295D878E2C349C970024DD0F /* BorderedModifier.swift in Sources */,
 				295D87932C35C6EB0024DD0F /* ProviderTagStyle.swift in Sources */,
 				295D87A62C3712C00024DD0F /* RatingBoxStyle.swift in Sources */,
