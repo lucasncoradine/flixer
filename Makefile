@@ -15,3 +15,6 @@ pullrequest: ## Make a new Pull Request
 	
 branch: ## Create a new branch
 	@./Scripts/branch.sh $(base)
+
+generate: ## Use xcodegen to generate the Xcode Project
+	@./Scripts/generate.sh
