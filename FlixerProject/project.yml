@@ -75,7 +75,7 @@ targets:
       - plugin: SwiftLintBuildToolPlugin
         package: SwiftLint
     sources:
-    - path: FlixerProject/FlixerProject
+    - path: FlixerProject
       excludes:
       - FlixerProjectSnapshotTests
       - FlixerProjectTests
@@ -94,7 +94,7 @@ targets:
     - package: swift-snapshot-testing
       product: SnapshotTesting
     sources:
-    - path: FlixerProject/FlixerProjectSnapshotTests
+    - path: FlixerProjectSnapshotTests
   FlixerProjectTests:
     platform: iOS
     type: bundle.unit-test
@@ -109,4 +109,4 @@ targets:
     - target: FlixerProject
     sources:
     - name: FlixerProjectTests
-      path: FlixerProject/FlixerProjectTests
+      path: FlixerProjectTests

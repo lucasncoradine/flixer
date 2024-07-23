@@ -18,7 +18,7 @@ rm -rf ./FlixerProject/FlixerProject.xcodeproj
 
 # Run xcodegen
 print_yellow "Running xcodegen...\n"
-xcodegen generate --project "FlixerProject"
+xcodegen generate --spec "FlixerProject/project.yml" --project "FlixerProject"
 
 # Open project
 print_yellow "Opening project...\n"
