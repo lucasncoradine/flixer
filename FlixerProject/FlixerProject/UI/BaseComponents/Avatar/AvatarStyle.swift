@@ -18,9 +18,9 @@ enum AvatarSize: CGFloat, CaseIterable {
     /// fontSize: 32
     case small = 60
     /// ```
-    /// size: 40
+    /// size: 34
     /// fontSize: 17
-    case extraSmall = 40
+    case extraSmall = 34
 
     var fontSize: CGFloat {
         switch self {
