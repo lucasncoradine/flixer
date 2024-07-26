@@ -23,11 +23,11 @@ enum RatingBoxSize {
     var iconSize: IconSize {
         switch self {
         case .large:
-            return .large
-        case .medium:
             return .medium
-        case .small:
+        case .medium:
             return .small
+        case .small:
+            return .extraSmall
         }
     }
 }

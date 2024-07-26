@@ -2,12 +2,16 @@ import SwiftUI
 
 /// Size of the icon
 enum IconSize: CGFloat {
+    /// Size: 14
+    case extraSmall = 14
+    /// Size: 18
+    case small = 18
     /// Size: 24
-    case small = 24
+    case medium = 24
     /// Size: 48
-    case medium = 48
+    case large = 48
     /// Size: 72
-    case large = 72
+    case extraLarge = 72
 }
 
 /// Icons from Design System
