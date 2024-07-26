@@ -28,12 +28,15 @@ struct Icon: View {
 
 // MARK: - Helpers
 private extension Icon {
-    func makeIcon(from imageResource: ImageResource) -> some View {
-        Image(imageResource)
-            .resizable()
-            .scaledToFit()
-            .frame(width: size.rawValue,
-                   height: size.rawValue)
+    @ViewBuilder
+    func makeIcon(from uiImage: UIImage?) -> some View {
+        if let uiImage {
+            Image(uiImage: uiImage)
+                .resizable()
+                .scaledToFit()
+                .frame(width: size.rawValue,
+                       height: size.rawValue)
+        }
     }
 }
 
@@ -43,7 +46,7 @@ private extension Icon {
         Section("Regular") {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
                 ForEach(IconImage.allCases, id: \.self) { icon in
-                    Icon(icon, size: .large)
+                    Icon(icon, size: .small)
                 }
             }
         }
@@ -51,7 +54,7 @@ private extension Icon {
         Section("Filled") {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 40))]) {
                 ForEach(IconImage.allCases, id: \.self) { icon in
-                    Icon(icon, size: .large).filled()
+                    Icon(icon, size: .small).filled()
                 }
             }
         }

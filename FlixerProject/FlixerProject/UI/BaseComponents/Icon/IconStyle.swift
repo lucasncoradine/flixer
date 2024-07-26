@@ -1,18 +1,35 @@
 import SwiftUI
 
+/// Size of the icon
 enum IconSize: CGFloat {
     /// Size: 14
-    case small = 14
-    /// Size: 20
-    case medium = 20
-    /// Size: 26
-    case large = 26
+    case extraSmall = 14
+    /// Size: 18
+    case small = 18
+    /// Size: 24
+    case medium = 24
+    /// Size: 48
+    case large = 48
+    /// Size: 72
+    case extraLarge = 72
 }
 
-enum IconImage: CaseIterable {
+/// Icons from Design System
+/// ## Reference:
+/// [Figma](https://www.figma.com/design/pqSdo2xKxBGCKXDtI2vtvH/Started?node-id=9-446)
+enum IconImage: String, CaseIterable {
+    // Icons
+    case brandAndroid
+    case brandApple
+    case brandLinux
+    case brandNintendoSwitch
+    case brandPlaystation
+    case brandWindows
+    case brandXbox
     case chevronRight
+    case heart
     case home
-    case thumbsUp
+    case like
     case monitor
     case monitorPlay
     case plus
@@ -21,53 +38,34 @@ enum IconImage: CaseIterable {
     case star
 }
 
+// MARK: - Helpers
+extension IconImage {
+    static private var basePath = "Icon/"
+    static private var filledSuffix = "-fill"
+
+    private var resourceName: String {
+        return self.rawValue.toKebabCase()
+    }
+
+    private var path: String {
+        Self.basePath.appending(resourceName)
+    }
+
+    private var pathFilled: String {
+        self.path.appending(Self.filledSuffix)
+    }
+}
+
 // MARK: - Icon List
 extension IconImage {
     /// Regular image version of the icon
-    var regular: ImageResource {
-        switch self {
-        case .chevronRight:
-            return .Icon.chevronRight
-        case .home:
-            return .Icon.home
-        case .thumbsUp:
-            return .Icon.like
-        case .monitor:
-            return .Icon.monitor
-        case .monitorPlay:
-            return .Icon.monitorPlay
-        case .plus:
-            return .Icon.plus
-        case .profile:
-            return .Icon.profile
-        case .search:
-            return .Icon.search
-        case .star:
-            return .Icon.star
-        }
+    var regular: UIImage? {
+        UIImage(named: self.path)
     }
 
     /// Filled image version of the icon
-    var filled: ImageResource {
-        switch self {
-        case .chevronRight:
-            return .Icon.chevronRightFill
-        case .home:
-            return .Icon.homeFill
-        case .thumbsUp:
-            return .Icon.likeFill
-        case .monitor:
-            return .Icon.monitorFill
-        case .monitorPlay:
-            return .Icon.monitorPlayFill
-        case .plus:
-            return .Icon.plusFill
-        case .profile:
-            return .Icon.profileFill
-        case .search:
-            return .Icon.searchFill
-        case .star:
-            return .Icon.starFill
-        }
+    var filled: UIImage? {
+        print(self.pathFilled)
+        return UIImage(named: self.pathFilled) ?? self.regular
     }
 }
